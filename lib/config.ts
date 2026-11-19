@@ -10,6 +10,12 @@ export const SITE = {
     "Portfolio of Zaldy Sabornay Jr, a documenter, QA specialist and UI/UX designer. Projects, skills and journey.",
 } as const;
 
+// Absolute site address for link previews. On Vercel it comes from the production domain;
+// locally it falls back to localhost. Nothing to set by hand.
+export const SITE_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 // Accent color: "blue" (default), "teal" or "violet". A config constant, not a user control.
 export type Accent = "blue" | "teal" | "violet";
 export const ACCENT: Accent = "blue";

@@ -48,8 +48,8 @@ export default function Contact() {
           {CONTACT.heading}
         </h2>
         <p className="m-0 max-w-[560px] text-lg text-[#cbd5e1]">
-          Email is the fastest way to reach me. I usually reply within{" "}
-          {CONTACT.replyTime}.
+          Email is the fastest way to reach me.
+          {CONTACT.replyTime ? ` I usually reply within ${CONTACT.replyTime}.` : ""}
         </p>
 
         <div className="flex flex-wrap items-center gap-4">

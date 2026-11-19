@@ -78,10 +78,14 @@ body {
     color 0.25s;
 }
 
-/* Sticky header must never hide a heading after an anchor jump. */
-section[id],
-main[id] {
-  scroll-margin-top: 72px;
+/* The header is sticky only on wide screens (it is 65px tall there). On phones it wraps
+   to 160px and would cover a fifth of the screen, so it scrolls away instead.
+   Where it is sticky, this padding keeps anchor jumps and keyboard focus from
+   landing underneath it. */
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 88px;
+  }
 }
 
 /* Visible keyboard focus on everything focusable. */

@@ -4,7 +4,7 @@ import { NAV_LINKS, SITE } from "@/lib/config";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-surface">
+    <header className="z-40 border-b border-line bg-surface lg:sticky lg:top-0">
       <nav
         aria-label="Main"
         className="mx-auto flex max-w-[1120px] flex-wrap items-center justify-between gap-x-6 gap-y-1 px-6 py-2.5"

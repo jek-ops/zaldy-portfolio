@@ -3,7 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ACCENT, SITE, THEME_STORAGE_KEY } from "@/lib/config";
+import { ACCENT, SITE, SITE_URL, THEME_STORAGE_KEY } from "@/lib/config";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -20,8 +20,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: SITE.title,
   description: SITE.description,
+  openGraph: {
+    title: SITE.title,
+    description: SITE.description,
+    type: "website",
+    siteName: SITE.name,
+    locale: "en_PH",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE.title,
+    description: SITE.description,
+  },
 };
 
 // Runs before first paint so the saved (or system) theme shows with no flash.

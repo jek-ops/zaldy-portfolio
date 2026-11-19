@@ -214,11 +214,12 @@ export const GOALS = [
   },
   {
     title: "Learning now",
-    text: "Building on my project experience by improving my UI/UX design skills and learning how professional QA testing is planned and reported.",
+    text: "Improving my UI/UX design skills and learning how professional QA testing is planned and reported.",
   },
 ] as const;
 
 export const CONTACT = {
   heading: "Let us build something useful together.",
-  replyTime: "[REPLY TIME]",
+  // Set to a short phrase such as "two days" once Zaldy decides. While it is null the sentence is hidden.
+  replyTime: null as string | null,
 } as const;
