@@ -1,6 +1,7 @@
 import Link from "next/link";
+import NavLinks from "@/components/NavLinks";
 import ThemeToggle from "@/components/ThemeToggle";
-import { NAV_LINKS, SITE } from "@/lib/config";
+import { SITE } from "@/lib/config";
 
 export default function Header() {
   return (
@@ -22,15 +23,7 @@ export default function Header() {
           {SITE.name}
         </Link>
         <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="inline-flex min-h-11 items-center font-medium text-ink no-underline hover:text-accent"
-            >
-              {link.label}
-            </Link>
-          ))}
+          <NavLinks />
           <ThemeToggle />
           <Link
             href="/#contact"

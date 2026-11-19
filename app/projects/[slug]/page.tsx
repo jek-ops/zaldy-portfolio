@@ -50,7 +50,10 @@ function Block({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex flex-col gap-3 border-t border-line pt-8 first:border-t-0 first:pt-0">
+    <section
+      data-reveal
+      className="flex flex-col gap-3 border-t border-line pt-8 first:border-t-0 first:pt-0"
+    >
       <h2 className="m-0 font-heading text-2xl font-bold leading-[1.2]">{title}</h2>
       {children}
     </section>
@@ -68,7 +71,7 @@ export default async function CaseStudyPage({ params }: Props) {
   return (
     <main id="main" className="bg-blueprint border-b border-line">
       <article className="mx-auto flex max-w-[860px] flex-col gap-10 px-6 py-16">
-        <header className="flex flex-col items-start gap-4">
+        <header data-reveal className="flex flex-col items-start gap-4">
           <Link
             href="/#projects"
             className="inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline underline-offset-4"
@@ -164,7 +167,11 @@ export default async function CaseStudyPage({ params }: Props) {
           </Block>
         </div>
 
-        <nav aria-label="More projects" className="flex flex-wrap justify-between gap-4">
+        <nav
+          aria-label="More projects"
+          data-reveal
+          className="flex flex-wrap justify-between gap-4"
+        >
           {others.map((other) => (
             <Link
               key={other.slug}

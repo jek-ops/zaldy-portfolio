@@ -8,7 +8,7 @@ export default function SectionHeading({
   hint?: string;
 }) {
   return (
-    <div className="flex flex-col gap-2">
+    <div data-reveal className="flex flex-col gap-2">
       <p className="m-0 text-sm font-semibold uppercase tracking-[0.08em] text-accent">
         {eyebrow}
       </p>

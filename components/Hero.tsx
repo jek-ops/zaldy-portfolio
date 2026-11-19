@@ -1,4 +1,7 @@
 import Image from "next/image";
+import HeroTrail from "@/components/HeroTrail";
+import PortraitTilt from "@/components/PortraitTilt";
+import { rd } from "@/lib/reveal";
 import { FACTS, HERO } from "@/lib/content";
 import { RESUME_URL } from "@/lib/config";
 
@@ -29,23 +32,38 @@ function DownloadIcon() {
 
 export default function Hero() {
   return (
-    <section className="bg-blueprint border-b border-line">
-      <div className="mx-auto flex max-w-[1120px] flex-col gap-16 px-6 pb-[72px] pt-20">
+    <section className="bg-blueprint relative border-b border-line">
+      <HeroTrail />
+      <div className="relative z-10 mx-auto flex max-w-[1120px] flex-col gap-16 px-6 pb-[72px] pt-20">
         <div className="flex flex-wrap items-center gap-14">
           <div className="flex min-w-0 flex-[1_1_480px] flex-col items-start gap-6">
-            <p className="m-0 inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-semibold">
+            <p
+              data-reveal
+              style={rd(0)}
+              className="m-0 inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-semibold"
+            >
               <span
                 aria-hidden="true"
                 className="dot size-2.5 rounded-full bg-accent"
               />
               {HERO.pill}
             </p>
-            <h1 className="m-0 font-heading text-[clamp(38px,5.4vw,64px)] font-bold leading-[1.05] tracking-[-0.025em]">
+            <h1
+              data-reveal
+              style={rd(90)}
+              className="m-0 font-heading text-[clamp(38px,5.4vw,64px)] font-bold leading-[1.05] tracking-[-0.025em]"
+            >
               {HERO.headlineStart}
               <span className="text-accent">{HERO.headlineAccent}</span>
             </h1>
-            <p className="m-0 max-w-[560px] text-lg text-muted">{HERO.text}</p>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+            <p data-reveal style={rd(180)} className="m-0 max-w-[560px] text-lg text-muted">
+              {HERO.text}
+            </p>
+            <div
+              data-reveal
+              style={rd(270)}
+              className="flex flex-wrap items-center gap-x-4 gap-y-3"
+            >
               <a href="#projects" className={primaryBtn}>
                 View my projects
                 <svg
@@ -85,16 +103,22 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex min-w-[260px] flex-[0_1_380px] flex-col">
-            <Image
-              src="/images/zaldy-portrait.webp"
-              width={960}
-              height={960}
-              priority
-              alt="Portrait of Zaldy Sabornay Jr in a dark suit, white shirt and dark tie, against a light blue background."
-              sizes="(min-width: 768px) 380px, 100vw"
-              className="h-[400px] w-full rounded-[20px] border border-line object-cover object-top"
-            />
+          <div
+            data-reveal
+            style={rd(150)}
+            className="flex min-w-[260px] flex-[0_1_380px] flex-col"
+          >
+            <PortraitTilt>
+              <Image
+                src="/images/zaldy-portrait.webp"
+                width={960}
+                height={960}
+                priority
+                alt="Portrait of Zaldy Sabornay Jr in a dark suit, white shirt and dark tie, against a light blue background."
+                sizes="(min-width: 768px) 380px, 100vw"
+                className="h-[400px] w-full rounded-[20px] border border-line object-cover object-top"
+              />
+            </PortraitTilt>
             <div className="relative -mt-11 mx-5 flex flex-col gap-0.5 rounded-[14px] border border-line bg-surface px-5 py-4 shadow-[0_12px_28px_var(--shadow)]">
               <p className="m-0 text-[13px] font-semibold uppercase tracking-[0.06em] text-accent">
                 {HERO.latest.label}
@@ -106,9 +130,11 @@ export default function Hero() {
         </div>
 
         <ul className="m-0 flex list-none flex-wrap gap-4 p-0">
-          {FACTS.map((fact) => (
+          {FACTS.map((fact, i) => (
             <li
-              key={fact.value}
+              key={fact.text}
+              data-reveal
+              style={rd(i * 90)}
               className="flex flex-[1_1_220px] items-center gap-4 rounded-[14px] border border-line bg-surface px-6 py-5"
             >
               <span className="font-heading text-4xl font-bold leading-none text-accent">

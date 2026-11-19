@@ -129,6 +129,25 @@ body {
   box-shadow: none;
 }
 
+/* Scroll reveal. Elements marked data-reveal start slightly low and transparent, then
+   fade up when they scroll into view (components/ScrollReveal.tsx adds .in-view).
+   They are hidden ONLY while JavaScript runs (html.js, set in layout.tsx) and the visitor
+   allows motion, so with scripts off or reduced motion on, everything is just visible. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  html.js [data-reveal].in-view {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Content that appears after a filter or tab change. */
 .fade {
   animation: fade 0.3s ease-out;

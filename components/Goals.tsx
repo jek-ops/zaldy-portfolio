@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/SectionHeading";
 import { GOALS } from "@/lib/content";
+import { rd } from "@/lib/reveal";
 
 export default function Goals() {
   return (
@@ -12,6 +13,8 @@ export default function Goals() {
         {GOALS.map((goal, i) => (
           <li
             key={goal.title}
+            data-reveal
+            style={rd(i * 100)}
             className="lift flex min-w-0 flex-[1_1_280px] flex-col gap-2.5 rounded-2xl border border-line bg-surface p-7"
           >
             <span

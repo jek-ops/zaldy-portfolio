@@ -3,6 +3,8 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
+import ScrollReveal from "@/components/ScrollReveal";
 import { ACCENT, SITE, SITE_URL, THEME_STORAGE_KEY } from "@/lib/config";
 
 const spaceGrotesk = Space_Grotesk({
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
 // Every storage access is wrapped in try/catch: storage can be blocked or empty.
 const themeInit = `(function(){try{var t=null;try{t=localStorage.getItem(${JSON.stringify(
   THEME_STORAGE_KEY,
-)});}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();`;
+)});}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}document.documentElement.classList.add("js");setTimeout(function(){if(!window.__reveal)document.documentElement.classList.remove("js");},3000);})();`;
 
 export default function RootLayout({
   children,
@@ -65,6 +67,8 @@ export default function RootLayout({
           >
             Skip to content
           </a>
+          <ScrollProgress />
+          <ScrollReveal />
           <Header />
           {children}
           <Footer />

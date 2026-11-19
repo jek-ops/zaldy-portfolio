@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { CONTACT } from "@/lib/content";
+import { rd } from "@/lib/reveal";
 import { SITE, SOCIAL } from "@/lib/config";
 
 type CopyState = "idle" | "copied" | "failed";
@@ -44,15 +45,15 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-band text-white">
       <div className="mx-auto flex max-w-[1120px] flex-col items-start gap-6 px-6 py-[88px]">
-        <h2 className="m-0 max-w-[680px] font-heading text-[clamp(32px,4.4vw,48px)] font-bold leading-[1.12] tracking-[-0.02em]">
+        <h2 data-reveal className="m-0 max-w-[680px] font-heading text-[clamp(32px,4.4vw,48px)] font-bold leading-[1.12] tracking-[-0.02em]">
           {CONTACT.heading}
         </h2>
-        <p className="m-0 max-w-[560px] text-lg text-[#cbd5e1]">
+        <p data-reveal style={rd(100)} className="m-0 max-w-[560px] text-lg text-[#cbd5e1]">
           Email is the fastest way to reach me.
           {CONTACT.replyTime ? ` I usually reply within ${CONTACT.replyTime}.` : ""}
         </p>
 
-        <div className="flex flex-wrap items-center gap-4">
+        <div data-reveal style={rd(200)} className="flex flex-wrap items-center gap-4">
           <a
             href={`mailto:${SITE.email}`}
             className="btn inline-flex min-h-[52px] items-center rounded-[10px] bg-white px-6 font-semibold text-[#0f172a] no-underline"
@@ -82,7 +83,7 @@ export default function Contact() {
           </button>
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-7 gap-y-2">
+        <div data-reveal style={rd(300)} className="flex flex-wrap items-center gap-x-7 gap-y-2">
           {SOCIAL.github ? (
             <a href={SOCIAL.github} className={linkCls}>
               GitHub
