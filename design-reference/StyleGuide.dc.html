@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portfolio style guide</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+body{margin:0;background:#F8FAFC}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+</style>
+</helmet>
+<div style="width: 1280px; height: 1500px; box-sizing: border-box; padding: 64px; background: #F8FAFC; color: #0F172A; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.5; display: flex; flex-direction: column; gap: 48px">
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1D4ED8">Style guide</p>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em">Clear Blueprint</h1>
+<p style="margin: 0; font-size: 18px; color: #475569">Calm, structured and readable. One accent color, generous spacing, and nothing that moves without a reason.</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 24px">Color</h2>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #F8FAFC; border: 1px solid #CBD5E1"></div>
+<p style="margin: 0; font-weight: 600">Ground</p>
+<p style="margin: 0; font-size: 14px; color: #475569">#F8FAFC · page background</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #FFFFFF; border: 1px solid #CBD5E1"></div>
+<p style="margin: 0; font-weight: 600">Surface</p>
+<p style="margin: 0; font-size: 14px; color: #475569">#FFFFFF · cards, nav</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #0F172A"></div>
+<p style="margin: 0; font-weight: 600">Ink</p>
+<p style="margin: 0; font-size: 14px; color: #475569">#0F172A · headings, body. About 17:1 on Ground</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #475569"></div>
+<p style="margin: 0; font-weight: 600">Muted</p>
+<p style="margin: 0; font-size: 14px; color: #475569">#475569 · secondary text. About 7:1 on Ground</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #1D4ED8"></div>
+<p style="margin: 0; font-weight: 600">Accent</p>
+<p style="margin: 0; font-size: 14px; color: #475569">#1D4ED8 · buttons, links. About 6.7:1 on white</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="height: 88px; border-radius: 12px; background: #B45309"></div>
+<p style="margin: 0; font-weight: 600">Focus</p>
+<p style="margin: 0; font-size: 14px; color: #475569">#B45309 · keyboard focus ring only</p>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 24px">Dark mode</h2>
+<div style="background: #0B1220; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px; min-height: 196px; box-sizing: border-box">
+<p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; color: #F1F5F9">Same layout, darker ground</p>
+<p style="margin: 0; color: #B4C0D3">Ground #0B1220, surface #131C31, text #F1F5F9, muted #B4C0D3. The accent lightens to #8AB0FF so it still passes contrast.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+<button type="button" style="font: inherit; font-weight: 600; color: #0B1220; background: #8AB0FF; border: none; min-height: 48px; padding: 0 24px; border-radius: 8px">Primary</button>
+<button type="button" style="font: inherit; font-weight: 600; color: #F1F5F9; background: #131C31; border: 1px solid #64748B; min-height: 48px; padding: 0 24px; border-radius: 8px">Secondary</button>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 24px">Interaction states</h2>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px; min-height: 196px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+<button type="button" style="font: inherit; font-weight: 600; font-size: 15px; color: #0F172A; background: #FFFFFF; border: 1px solid #94A3B8; min-height: 44px; padding: 0 18px; border-radius: 999px">Rest</button>
+<button type="button" style="font: inherit; font-weight: 600; font-size: 15px; color: #1D4ED8; background: #FFFFFF; border: 1px solid #1D4ED8; min-height: 44px; padding: 0 18px; border-radius: 999px">Hover</button>
+<button type="button" style="font: inherit; font-weight: 600; font-size: 15px; color: #FFFFFF; background: #1D4ED8; border: 1px solid #1D4ED8; min-height: 44px; padding: 0 18px; border-radius: 999px">Selected</button>
+</div>
+<p style="margin: 0; color: #475569">Filter and tab pills fill with the accent when selected. Cards lift 4 px with an accent border on hover. Motion lasts 0.15 to 0.3 seconds and switches off for people who ask for reduced motion.</p>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px">
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 24px">Typography</h2>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 14px; color: #475569">Heading 1 · Space Grotesk Bold 56</p>
+<p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 56px; line-height: 1.1; letter-spacing: -0.02em">Build with care</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 14px; color: #475569">Heading 2 · Space Grotesk Bold 36</p>
+<p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 36px; line-height: 1.2">Work I am proud of</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 14px; color: #475569">Heading 3 · Space Grotesk Bold 24</p>
+<p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2">SafeCheck-SignSpeak</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 14px; color: #475569">Body · Inter Regular 16, line height 1.6</p>
+<p style="margin: 0; line-height: 1.6">Body text stays at 16 pixels or larger, in lines short enough to read comfortably on a phone or a laptop.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 14px; color: #475569">Label · Inter Semibold 14, uppercase</p>
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1D4ED8">Projects</p>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 24px">Components</h2>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; color: #475569">Buttons · 48 px tall, one primary per screen</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
+<button type="button" style="font: inherit; font-weight: 600; color: #FFFFFF; background: #1D4ED8; border: none; min-height: 48px; padding: 0 24px; border-radius: 8px">Primary</button>
+<button type="button" style="font: inherit; font-weight: 600; color: #0F172A; background: #FFFFFF; border: 1px solid #94A3B8; min-height: 48px; padding: 0 24px; border-radius: 8px">Secondary</button>
+<button type="button" style="font: inherit; font-weight: 600; color: #FFFFFF; background: #1D4ED8; border: none; min-height: 48px; padding: 0 24px; border-radius: 8px; outline: 3px solid #B45309; outline-offset: 3px">Keyboard focus</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; color: #475569">Text link · always underlined, never color alone</p>
+<a href="#link" style="color: #1D4ED8; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; align-self: flex-start">Read the case study</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; color: #475569">Skill tags</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px">
+<li style="background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 6px; padding: 4px 12px; font-size: 14px; font-weight: 500">Next.js</li>
+<li style="background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 6px; padding: 4px 12px; font-size: 14px; font-weight: 500">TypeScript</li>
+<li style="background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 6px; padding: 4px 12px; font-size: 14px; font-weight: 500">PostgreSQL</li>
+</ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; color: #475569">Card · white surface, 1 px border, 16 px radius, no heavy shadow</p>
+<div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-weight: 600">Card title</p>
+<p style="margin: 0; color: #475569">Supporting text in Muted.</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; color: #475569">Spacing · steps of 8 px</p>
+<div style="display: flex; align-items: flex-end; gap: 12px">
+<div style="width: 8px; height: 8px; background: #1D4ED8; border-radius: 2px"></div>
+<div style="width: 16px; height: 16px; background: #1D4ED8; border-radius: 2px"></div>
+<div style="width: 24px; height: 24px; background: #1D4ED8; border-radius: 2px"></div>
+<div style="width: 32px; height: 32px; background: #1D4ED8; border-radius: 2px"></div>
+<div style="width: 48px; height: 48px; background: #1D4ED8; border-radius: 2px"></div>
+<div style="width: 72px; height: 72px; background: #1D4ED8; border-radius: 2px"></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1500}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
