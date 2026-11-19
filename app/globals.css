@@ -148,6 +148,27 @@ body {
   }
 }
 
+/* Hero entrance. Unlike data-reveal, this is a plain CSS animation: it needs no JavaScript,
+   so the hero is on screen as soon as the page paints (this matters for load speed: the
+   hero text is the largest thing on the page). fill-mode "backwards" only holds the starting
+   look during the delay; afterwards normal styles apply, so hover effects still work. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-enter] {
+    animation: enter 0.6s ease-out backwards;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Content that appears after a filter or tab change. */
 .fade {
   animation: fade 0.3s ease-out;

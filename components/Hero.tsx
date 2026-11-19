@@ -38,7 +38,7 @@ export default function Hero() {
         <div className="flex flex-wrap items-center gap-14">
           <div className="flex min-w-0 flex-[1_1_480px] flex-col items-start gap-6">
             <p
-              data-reveal
+              data-enter
               style={rd(0)}
               className="m-0 inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-semibold"
             >
@@ -49,18 +49,18 @@ export default function Hero() {
               {HERO.pill}
             </p>
             <h1
-              data-reveal
+              data-enter
               style={rd(90)}
               className="m-0 font-heading text-[clamp(38px,5.4vw,64px)] font-bold leading-[1.05] tracking-[-0.025em]"
             >
               {HERO.headlineStart}
               <span className="text-accent">{HERO.headlineAccent}</span>
             </h1>
-            <p data-reveal style={rd(180)} className="m-0 max-w-[560px] text-lg text-muted">
+            <p data-enter style={rd(180)} className="m-0 max-w-[560px] text-lg text-muted">
               {HERO.text}
             </p>
             <div
-              data-reveal
+              data-enter
               style={rd(270)}
               className="flex flex-wrap items-center gap-x-4 gap-y-3"
             >
@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
 
           <div
-            data-reveal
+            data-enter
             style={rd(150)}
             className="flex min-w-[260px] flex-[0_1_380px] flex-col"
           >
@@ -133,7 +133,7 @@ export default function Hero() {
           {FACTS.map((fact, i) => (
             <li
               key={fact.text}
-              data-reveal
+              data-enter
               style={rd(i * 90)}
               className="flex flex-[1_1_220px] items-center gap-4 rounded-[14px] border border-line bg-surface px-6 py-5"
             >
